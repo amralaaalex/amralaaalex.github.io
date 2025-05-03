@@ -2,7 +2,7 @@
 
 This is a static website for Data Automation XP, a company specializing in automating data tasks using Python. The website showcases the company's services, expertise, and provides a way for potential clients to get in touch.
 
-## Features
+## Features 
 
 - Responsive design that works on desktop and mobile devices
 - Services section showcasing Python data automation capabilities
