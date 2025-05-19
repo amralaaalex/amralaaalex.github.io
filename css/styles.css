@@ -1,25 +1,66 @@
 
-/* Custom Styles for DataAutomationXP */
+/* Base font styles */
 body {
   font-family: 'Roboto', sans-serif;
 }
-
 h1, h2, h3 {
   font-family: 'Inter', sans-serif;
 }
 
-#hero-diagram, #services-diagram {
-  min-height: 200px;
-  background: repeating-linear-gradient(
-    45deg,
-    #f0f4f8,
-    #f0f4f8 10px,
-    #f5f7fa 10px,
-    #f5f7fa 20px
-  );
+/* Hero Diagram Style */
+#hero-diagram {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ccc;
-  font-size: 1.2rem;
+  position: relative;
+  height: 400px;
+  background-color: #e8f1fa;
+  border-radius: 10px;
+}
+#hero-diagram .center-node {
+  position: absolute;
+  background: #002F5D;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50%;
+  text-align: center;
+}
+#hero-diagram .spoke-node {
+  position: absolute;
+  background: #0066CC;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+
+/* Layout of nodes */
+#spoke-1 { top: 10%; left: 50%; transform: translateX(-50%); }
+#spoke-2 { top: 50%; right: 10%; transform: translateY(-50%); }
+#spoke-3 { bottom: 10%; left: 50%; transform: translateX(-50%); }
+#spoke-4 { top: 50%; left: 10%; transform: translateY(-50%); }
+
+/* Services Diagram */
+#services-diagram {
+  display: flex;
+  gap: 2rem;
+}
+.workflow-level-1,
+.workflow-level-2,
+.workflow-level-3 {
+  flex: 1;
+}
+.workflow-level-1 div,
+.workflow-level-2 div {
+  background: #f0f4f8;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+.workflow-level-3 {
+  background: #fefefe;
+  padding: 1rem;
+  border-left: 2px solid #ccc;
+  border-radius: 0.5rem;
 }
