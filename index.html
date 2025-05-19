@@ -1,109 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Automation XP - Python Data Automation Experts</title>
-    <meta name="description" content="Data Automation XP specializes in automating data tasks using Python. Our experts help businesses streamline their data workflows and processes.">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DataAutomationXP - Streamlining Data Engineering Workflows with Automation" />
+  <title>DataAutomationXP</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1><span class="highlight">Data Automation</span> XP</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li class="current"><a href="index.html">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<body class="bg-gray-100 text-gray-800 font-roboto">
 
-    <section id="showcase">
-        <div class="container">
-            <h1>Python Data Automation Experts</h1>
-            <p>Automating complex data workflows with expert Python solutions</p>
-        </div>
-    </section>
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-blue-900">DataAutomationXP</h1>
+      <nav class="space-x-4 hidden md:flex">
+        <a href="#services" class="text-blue-900 hover:text-blue-600">Services</a>
+        <a href="#about" class="text-blue-900 hover:text-blue-600">About</a>
+        <a href="#blog" class="text-blue-900 hover:text-blue-600">Blog</a>
+        <a href="#contact" class="text-blue-900 hover:text-blue-600">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <section id="newsletter">
-        <div class="container">
-            <h1>Subscribe To Our Newsletter</h1>
-            <form>
-                <input type="email" placeholder="Enter Email...">
-                <button type="submit" class="button_1">Subscribe</button>
-            </form>
-        </div>
-    </section>
+  <!-- Hero Section (Hub and Spoke Placeholder) -->
+  <section class="pt-28 pb-16 bg-blue-50 text-center" id="home">
+    <h2 class="text-3xl font-bold text-blue-900 mb-4">Automation in Action</h2>
+    <div id="hero-diagram" class="mx-auto max-w-4xl"> <!-- Placeholder for SVG hub-and-spoke --> </div>
+  </section>
 
-    <section id="boxes" class="services">
-        <div class="container">
-            <h2 id="services" class="section-title">Our Services</h2>
-            <div class="box">
-                <i class="fas fa-robot fa-4x"></i>
-                <h3>Process Automation</h3>
-                <p>We build custom Python solutions to automate repetitive data processing tasks, freeing up your team for higher-value activities.</p>
-            </div>
-            <div class="box">
-                <i class="fas fa-database fa-4x"></i>
-                <h3>Data Integration</h3>
-                <p>Seamlessly connect disparate data sources with our Python-powered ETL pipelines and data integration solutions.</p>
-            </div>
-            <div class="box">
-                <i class="fas fa-chart-line fa-4x"></i>
-                <h3>Analytics Automation</h3>
-                <p>Automate your reporting and analytics with custom Python scripts that transform raw data into actionable insights.</p>
-            </div>
-        </div>
-    </section>
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-blue-900 mb-8">Our Services</h2>
+      <div id="services-diagram"> <!-- Placeholder for three-level interactive diagram --> </div>
+    </div>
+  </section>
 
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title">About Data Automation XP</h2>
-            <p>Data Automation XP is a specialized team of Python experts dedicated to helping organizations streamline their data operations. With years of experience in data engineering and automation, we create tailored solutions that save time, reduce errors, and unlock new possibilities with your data.</p>
-            <p>Our XP stands for both "experience" and "expertise" - we bring both to every project to deliver exceptional results.</p>
+  <!-- About & Blog Carousel -->
+  <section id="about" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-blue-900 mb-8">Meet Our Team & Read Our Insights</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"> <!-- Team Bio Slide --> </div>
+          <div class="swiper-slide"> <!-- Blog Preview Slide --> </div>
         </div>
-    </section>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="contact-form">
-                <form>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="button_1">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="max-w-2xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-blue-900 mb-4">Contact Us</h2>
+      <form class="space-y-4" aria-label="Contact Form">
+        <input type="text" name="name" placeholder="Your Name" class="w-full border border-gray-300 px-4 py-2 rounded" required aria-required="true" />
+        <input type="email" name="email" placeholder="Your Email" class="w-full border border-gray-300 px-4 py-2 rounded" required aria-required="true" />
+        <textarea name="message" rows="5" placeholder="Your Message" class="w-full border border-gray-300 px-4 py-2 rounded" required aria-required="true"></textarea>
+        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Send Message</button>
+      </form>
+    </div>
+  </section>
 
-    <footer>
-        <p>Data Automation XP &copy; 2025</p>
-        <p>Created by:&copy; The 3 Scrapers</p>
-        <div class="social">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-    </footer>
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-6 text-center">
+    <div class="space-x-4">
+      <a href="#" class="hover:underline"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="hover:underline"><i class="fab fa-linkedin"></i></a>
+      <a href="#" class="hover:underline"><i class="fab fa-github"></i></a>
+    </div>
+    <p class="mt-4 text-sm">&copy; 2025 DataAutomationXP. All rights reserved.</p>
+  </footer>
 
-    <script src="js/main.js"></script>
+  <!-- Scripts -->
+  <script>
+    var swiper = new Swiper('.swiper', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    });
+  </script>
+  <script src="main.js"></script>
 </body>
 </html>
