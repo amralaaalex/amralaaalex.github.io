@@ -1,109 +1,184 @@
-<!DOCTYPE html>
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Automation XP - Python Data Automation Experts</title>
-    <meta name="description" content="Data Automation XP specializes in automating data tasks using Python. Our experts help businesses streamline their data workflows and processes.">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Automation Experts</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" sizes="180x180" href="G:\My Drive\SharedLaptop\Orders\DataAutomationXP\grok3design\favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="G:\My Drive\SharedLaptop\Orders\DataAutomationXP\grok3design\favicon.ico">
+  <style>
+        .header {
+            display: flex; /* Use flexbox for a horizontal layout */
+            justify-content: space-between; /* Pushes logo+h1 to left and nav to right */
+            align-items: center; /* Vertically center the elements */
+            padding:0.5rem; /* Optional: Add padding for spacing */
+        }
+        .header-left {
+            display: flex; /* Group logo and h1 together */
+            align-items: center; /* Vertically center logo and h1 */
+        }
+        .header-left img {
+            width: 50px; /* Adjust logo size as needed */
+            height: auto;
+            margin-right: 10px; /* Space between logo and title */
+        }
+
+        .header-left h1 {
+            font-size: 24px; /* Adjust font size as needed */
+            margin: 0; /* Remove default margins */
+        }
+
+        .header nav {
+            margin-left: 20px; /* Space between nav and other elements */
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1><span class="highlight">Data Automation</span> XP</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li class="current"><a href="index.html">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header class="header">
+    <div class="header-left">
+      <a href="#home"> <!-- Link to the home section or any URL (e.g., "/") -->
+        <img src="G:\My Drive\SharedLaptop\Orders\DataAutomationXP\grok3design\logo_.png" alt="Data Automation Experts Logo">
+      </a>
+    <h1>Data Automation eXPerts</h1>
+    </div>
+    <nav class="nav">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#blog" class="nav-link">Blog</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
 
-    <section id="showcase">
-        <div class="container">
-            <h1>Python Data Automation Experts</h1>
-            <p>Automating complex data workflows with expert Python solutions</p>
-        </div>
+  <main>
+    <section id="home" class="hero">
+      <img src="G:\My Drive\SharedLaptop\Orders\DataAutomationXP\grok3design\banner_.png" alt="Data Automation Expert">
     </section>
 
-    <section id="newsletter">
-        <div class="container">
-            <h1>Subscribe To Our Newsletter</h1>
-            <form>
-                <input type="email" placeholder="Enter Email...">
-                <button type="submit" class="button_1">Subscribe</button>
-            </form>
+    <section id="services" class="services">
+      <h2>Our Services</h2>
+      <div class="workflow">
+        <div class="level-1">
+          <div class="level-1-item" data-id="collection">Smart Data Collection</div>
+          <div class="level-1-item" data-id="processing">Intelligent Data Processing</div>
+          <div class="level-1-item" data-id="delivery">Flexible Data Delivery</div>
+          <div class="level-1-item" data-id="automation">Powerful Data Automation</div>
         </div>
+        <div class="level-2" id="level-2-collection" style="display: none;">
+          <div class="level-2-item" data-id="a1">Web Data Scraping</div>
+          <div class="level-2-item" data-id="a2">Mobile App Data Extraction</div>
+          <div class="level-2-item" data-id="a3">Offline Source Digitization</div>
+        </div>
+        <div class="level-2" id="level-2-processing" style="display: none;">
+          <div class="level-2-item" data-id="b1">Data Cleaning</div>
+          <div class="level-2-item" data-id="b2">Data Formatting</div>
+          <div class="level-2-item" data-id="b3">Data Validation</div>
+        </div>
+        <div class="level-2" id="level-2-delivery" style="display: none;">
+          <div class="level-2-item" data-id="c1">Storage Solutions</div>
+          <div class="level-2-item" data-id="c2">Visual Reports & Analysis</div>
+        </div>
+        <div class="level-2" id="level-2-automation" style="display: none;">
+          <div class="level-2-item" data-id="d1">Workflow Automation</div>
+          <div class="level-2-item" data-id="d2">Monitoring & Change Detection</div>
+          <div class="level-2-item" data-id="d3">Task Scheduling</div>
+          <div class="level-2-item" data-id="d4">Real-Time Alerts</div>
+        </div>
+        <div class="level-3" id="level-3"></div>
+      </div>
     </section>
 
-    <section id="boxes" class="services">
-        <div class="container">
-            <h2 id="services" class="section-title">Our Services</h2>
-            <div class="box">
-                <i class="fas fa-robot fa-4x"></i>
-                <h3>Process Automation</h3>
-                <p>We build custom Python solutions to automate repetitive data processing tasks, freeing up your team for higher-value activities.</p>
-            </div>
-            <div class="box">
-                <i class="fas fa-database fa-4x"></i>
-                <h3>Data Integration</h3>
-                <p>Seamlessly connect disparate data sources with our Python-powered ETL pipelines and data integration solutions.</p>
-            </div>
-            <div class="box">
-                <i class="fas fa-chart-line fa-4x"></i>
-                <h3>Analytics Automation</h3>
-                <p>Automate your reporting and analytics with custom Python scripts that transform raw data into actionable insights.</p>
-            </div>
-        </div>
+    <section id="about" class="about">
+      <h2>About Us</h2>
+      <p>Data Automation XP is a specialized team of Python experts dedicated to helping organizations streamline their data operations. With years of experience in data engineering and automation, we create tailored solutions that save time, reduce errors, and unlock new possibilities with your data. Our XP stands for both "experience" and "expertise" - we bring both to every project to deliver exceptional results.</p>
     </section>
 
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title">About Data Automation XP</h2>
-            <p>Data Automation XP is a specialized team of Python experts dedicated to helping organizations streamline their data operations. With years of experience in data engineering and automation, we create tailored solutions that save time, reduce errors, and unlock new possibilities with your data.</p>
-            <p>Our XP stands for both "experience" and "expertise" - we bring both to every project to deliver exceptional results.</p>
+    <section id="blog" class="blog">
+      <h2>Our Blog</h2>
+      <div class="carousel">
+        <button class="carousel-prev">←</button>
+        <div class="carousel-track">
+          <div class="carousel-item">
+            <img src="https://placehold.co/300x200" alt="Blog Post 1">
+            <h3>Blog Post 1</h3>
+            <a href="https://blog.dataautomationxp.com">Read More</a>
+          </div>
+          <div class="carousel-item">
+            <img src="https://placehold.co/300x200" alt="Blog Post 2">
+            <h3>Blog Post 2</h3>
+            <a href="https://blog.dataautomationxp.com">Read More</a>
+          </div>
+          <div class="carousel-item">
+            <img src="https://placehold.co/300x200" alt="Blog Post 3">
+            <h3>Blog Post 3</h3>
+            <a href="https://blog.dataautomationxp.com">Read More</a>
+          </div>
         </div>
+        <button class="carousel-next">→</button>
+      </div>
     </section>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="contact-form">
-                <form>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="button_1">Send Message</button>
-                </form>
-            </div>
-        </div>
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
     </section>
+  </main>
 
-    <footer>
-        <p>Data Automation XP &copy; 2025</p>
-        <p>Created by:&copy; The 3 Scrapers</p>
-        <div class="social">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-    </footer>
+  <footer class="footer">
+    <a href="https://facebook.com/dataautomationexperts">Facebook</a>
+    <a href="https://linkedin.com/company/dataautomationexperts">LinkedIn</a>
+    <a href="https://twitter.com/dataautomationxp">Twitter</a>
+    <a href="https://github.com/dataautomationexperts">GitHub</a>
+  </footer>
 
-    <script src="js/main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
