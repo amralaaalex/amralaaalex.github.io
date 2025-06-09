@@ -11,15 +11,33 @@ body {
 }
 
 .header {
-  background: #2358a5;
-  color: #fcfcfb;
-  padding: 0rem;
+  background: #fcfcfb;
+  color: #2358a5;
+  padding: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+.header-left {
+    display: flex; /* Group logo and h1 together */
+    align-items: center; /* Vertically center logo and h1 */
+}
+.header-left img {
+    width: 50px; /* Adjust logo size as needed */
+    height: auto;
+    margin-right: 10px; /* Space between logo and title */
+}
+
+.header-left h1 {
+    font-size: 24px; /* Adjust font size as needed */
+    margin: 0; /* Remove default margins */
+}
+
+.header nav {
+    margin-left: 20px; /* Space between nav and other elements */
 }
 
 .logo {
@@ -32,7 +50,7 @@ body {
 }
 
 .nav a {
-  color: white;
+  color: #2358a5;
   text-decoration: none;
   margin-left: 1.5rem;
   transition: color 0.3s;
@@ -115,54 +133,63 @@ h2 {
 
 .carousel {
   position: relative;
-  max-width: 960px;
-  margin: 0 auto;
   overflow: hidden;
+  max-width: 960px; /* Adjust to match your design */
+  margin: 0 auto;
 }
-
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease;
+  flex-wrap: nowrap;
+  transition: transform 0.3s ease-in-out;
 }
-
 .carousel-item {
-  flex: 0 0 300px;
-  margin-right: 20px;
+  flex: 0 0 33.33%; /* Three items side by side */
+  padding: 20px;
+  background: #f9f9f9; /* Match your design */
   text-align: center;
+  box-sizing: border-box;
 }
-
 .carousel-item img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  max-width: 300px; /* Match placeholder size */
+  height: auto;
+  margin-bottom: 10px;
 }
-
 .carousel-item h3 {
-  margin: 1rem 0;
+  font-size: 1.2em;
+  margin: 0 0 10px;
+  color: #333; /* Match your design */
 }
-
+.carousel-item p {
+  color: #666;
+  margin: 0 0 10px;
+}
 .carousel-item a {
-  color: #1e3a8a;
+  display: inline-block;
+  color: #007bff; /* Match your design */
   text-decoration: none;
+  font-weight: bold;
 }
-
+.carousel-item a:hover {
+  text-decoration: underline;
+}
 .carousel-prev, .carousel-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #2358a5;
-  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
   border: none;
-  padding: 0.5rem;
+  padding: 10px 15px;
   cursor: pointer;
+  font-size: 1.2em;
+  z-index: 10; /* Ensure arrows are above content */
 }
-
 .carousel-prev {
-  left: 0;
+  left: 10px; /* Adjusted for visibility */
 }
-
 .carousel-next {
-  right: 0;
+  right: 10px; /* Adjusted for visibility */
 }
 
 .contact form {
@@ -250,3 +277,44 @@ h2 {
     font-size: 1.5rem;
   }
 }
+.blog-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.blog-list {
+  list-style: none;
+  padding: 0;
+}
+.blog-list li {
+  margin-bottom: 20px;
+}
+.blog-list h2 {
+  font-size: 1.5em;
+  color: #333; /* Match your site’s color scheme */
+}
+.blog-list p {
+  color: #666;
+}
+.site-footer {
+  background: #f9f9f9; /* Match your design */
+  padding: 20px;
+  text-align: center;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+.footer-links li {
+  display: inline;
+  margin: 0 10px;
+}
+.footer-links a {
+  color: #333; /* Match your design */
+  text-decoration: none;
+}
+.post-content { max-width: 800px; margin: 0 auto; padding: 20px; }
+.post-header { margin-bottom: 20px; }
+.post-meta { color: #666; font-style: italic; }
+.post-image { width: 100%; height: auto; margin-bottom: 20px; }
+.category-carousel, .general-carousel { margin-top: 40px; }
