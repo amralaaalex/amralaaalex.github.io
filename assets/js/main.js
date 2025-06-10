@@ -3,13 +3,27 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.nav a').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
-      const targetId = link.getAttribute('href').substring(1);
-      const targetSection = document.getElementById(targetId);
-      if (targetSection) {
-        window.scrollTo({
-          top: targetSection.offsetTop - 60,
-          behavior: 'smooth'
-        });
+      const href = link.getAttribute('href');
+      const [path, hash] = href.split('#');
+      const isHomeLink = path === '/' || path === '' || path === '{{ '/' | relative_url }}';
+
+      if (hash && (isHomeLink || window.location.pathname !== '/')) {
+        // Redirect to homepage with hash if on another page
+        if (window.location.pathname !== '/') {
+          window.location.href = `/${hash ? '#' + hash : ''}`;
+        } else {
+          // Scroll to section if on homepage
+          const targetSection = document.getElementById(hash);
+          if (targetSection) {
+            window.scrollTo({
+              top: targetSection.offsetTop - 60,
+              behavior: 'smooth'
+            });
+          }
+        }
+      } else {
+        // Navigate to other pages (e.g., blog.html)
+        window.location.href = href;
       }
     });
   });
@@ -127,21 +141,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Contact form validation and submission
   const form = document.getElementById('contact-form');
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+  if (form) {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
 
-    if (name && email && message) {
-      if (/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
-        alert(`Message sent to info@dataautomationxp.com\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
-        form.reset();
+      if (name && email && message) {
+        if (/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
+          alert(`Message sent to info@dataautomationxp.com\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+          form.reset();
+        } else {
+          alert('Please enter a valid email address.');
+        }
       } else {
-        alert('Please enter a valid email address.');
+        alert('Please fill out all fields.');
       }
-    } else {
-      alert('Please fill out all fields.');
-    }
-  });
+    });
+  }
 });
