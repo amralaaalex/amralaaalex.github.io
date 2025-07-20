@@ -3,18 +3,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  {% seo %}
+  <!-- SEO Meta Tags -->
+  <title>{{ page.title | default: "DataAutomationXP - Data Automation Experts" }}</title>
+  <meta name="description" content="{{ page.description | default: 'Data Automation XP offers expert Python-based solutions for web scraping, data processing, and automation for e-commerce and prop-tech.' }}">
+  <meta name="keywords" content="{{ page.keywords | default: 'data automation, web scraping, python, scrapy, e-commerce, prop-tech, competitive intelligence, task automation' }}">
+  <meta name="author" content="{{ page.author | default: 'DataAutomationXP Team' }}">
+  <meta name="robots" content="index, follow">
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="{{ page.title | default: 'DataAutomationXP - Data Automation Experts' }}">
+  <meta property="og:description" content="{{ page.description | default: 'Streamline your data operations with our Python-based automation and web scraping solutions.' }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ page.image | default: '/assets/images/logo.png' | absolute_url }}">
+  <meta property="og:site_name" content="DataAutomationXP">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | default: 'DataAutomationXP - Data Automation Experts' }}">
+  <meta name="twitter:description" content="{{ page.description | default: 'Expert solutions for data automation and web scraping.' }}">
+  <meta name="twitter:image" content="{{ page.image | default: '/assets/images/logo.png' | absolute_url }}">
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "DataAutomationXP",
+    "url": "{{ site.url | default: 'https://dataautomationxp.com' }}",
+    "logo": "{{ '/assets/images/logo.png' | absolute_url }}",
+    "description": "Data Automation XP provides Python-based solutions for web scraping, data processing, and automation for e-commerce and prop-tech industries.",
+    "sameAs": [
+      "https://facebook.com",
+      "https://linkedin.com",
+      "https://twitter.com",
+      "https://github.com"
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
   <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
-
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','G-MHNSFHGZV4');</script>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  {{ content }}
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=G-MHNSFHGZV4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  {% include header.html %}
+  <main>
+    {{ content }}
+  </main>
+  {% include footer.html %}
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>

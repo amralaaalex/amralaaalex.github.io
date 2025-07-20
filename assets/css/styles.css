@@ -318,3 +318,36 @@ h2 {
 .post-meta { color: #666; font-style: italic; }
 .post-image { width: 100%; height: auto; margin-bottom: 20px; }
 .category-carousel, .general-carousel { margin-top: 40px; }
+/* Add to existing styles.css or replace .hero and .banner-image rules */
+.hero {
+  text-align: center;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+.hero img.banner-image {
+  display: block;
+  max-width: 100% !important;
+  height: auto !important;
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 1.5rem 0.5rem;
+  }
+  .hero img.banner-image {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1rem 0.5rem;
+  }
+  .hero img.banner-image {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
