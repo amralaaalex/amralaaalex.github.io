@@ -1,0 +1,130 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3730a3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pythonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd43b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#306998;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="laptopGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e5e7eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9ca3af;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative Code Elements -->
+  <g opacity="0.1">
+    <text x="100" y="100" font-family="monospace" font-size="24" fill="white">def freelancer():</text>
+    <text x="120" y="130" font-family="monospace" font-size="24" fill="white">return success</text>
+    <text x="900" y="500" font-family="monospace" font-size="20" fill="white">import freedom</text>
+    <text x="50" y="550" font-family="monospace" font-size="18" fill="white">while True:</text>
+    <text x="70" y="580" font-family="monospace" font-size="18" fill="white">code()</text>
+  </g>
+  
+  <!-- Python Logo -->
+  <g transform="translate(150, 200)">
+    <circle cx="0" cy="0" r="60" fill="#ffd43b"/>
+    <circle cx="25" cy="25" r="60" fill="#306998"/>
+    <circle cx="12.5" cy="12.5" r="45" fill="none" stroke="white" stroke-width="3" opacity="0.8"/>
+    <text x="-15" y="8" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white">Py</text>
+  </g>
+  
+  <!-- Laptop -->
+  <g transform="translate(400, 280)">
+    <!-- Laptop Base -->
+    <ellipse cx="0" cy="80" rx="120" ry="15" fill="#1f2937" opacity="0.3"/>
+    <rect x="-100" y="60" width="200" height="20" rx="10" fill="url(#laptopGradient)"/>
+    
+    <!-- Laptop Screen -->
+    <rect x="-90" y="-40" width="180" height="100" rx="8" fill="#1f2937"/>
+    <rect x="-85" y="-35" width="170" height="90" rx="4" fill="#000"/>
+    
+    <!-- Screen Content -->
+    <rect x="-80" y="-30" width="160" height="80" rx="2" fill="#0f172a"/>
+    <line x1="-70" y1="-20" x2="70" y2="-20" stroke="#10b981" stroke-width="2"/>
+    <line x1="-70" y1="-10" x2="50" y2="-10" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="-70" y1="0" x2="60" y2="0" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="-70" y1="10" x2="40" y2="10" stroke="#ef4444" stroke-width="2"/>
+    <line x1="-70" y1="20" x2="70" y2="20" stroke="#8b5cf6" stroke-width="2"/>
+    <line x1="-70" y1="30" x2="55" y2="30" stroke="#06b6d4" stroke-width="2"/>
+  </g>
+  
+  <!-- Money/Success Icons -->
+  <g transform="translate(700, 250)">
+    <!-- Dollar Sign -->
+    <circle cx="0" cy="0" r="35" fill="#10b981" opacity="0.9"/>
+    <text x="-12" y="12" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white">$</text>
+    
+    <!-- Floating smaller dollar signs -->
+    <circle cx="60" cy="-20" r="15" fill="#34d399" opacity="0.7"/>
+    <text x="55" y="-13" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">$</text>
+    
+    <circle cx="40" cy="40" r="12" fill="#6ee7b7" opacity="0.6"/>
+    <text x="36" y="46" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">$</text>
+  </g>
+  
+  <!-- Location Independence Icon -->
+  <g transform="translate(850, 200)">
+    <circle cx="0" cy="0" r="25" fill="#3b82f6"/>
+    <path d="M-15,-10 L15,-10 L10,0 L15,10 L-15,10 L-10,0 Z" fill="white"/>
+    <circle cx="0" cy="0" r="4" fill="#3b82f6"/>
+  </g>
+  
+  <!-- Main Title -->
+  <text x="600" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">
+    Freelance Python Developer
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#e5e7eb">
+    Your Complete Guide to Success in 2025
+  </text>
+  
+  <!-- Key Benefits -->
+  <g transform="translate(200, 500)">
+    <rect x="0" y="0" width="800" height="80" rx="10" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    
+    <!-- Benefit 1 -->
+    <g transform="translate(50, 25)">
+      <circle cx="0" cy="15" r="8" fill="#10b981"/>
+      <text x="20" y="12" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="white">High Demand</text>
+      <text x="20" y="28" font-family="Arial, sans-serif" font-size="12" fill="#d1d5db">Growing market</text>
+    </g>
+    
+    <!-- Benefit 2 -->
+    <g transform="translate(200, 25)">
+      <circle cx="0" cy="15" r="8" fill="#3b82f6"/>
+      <text x="20" y="12" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="white">Great Rates</text>
+      <text x="20" y="28" font-family="Arial, sans-serif" font-size="12" fill="#d1d5db">$50-150/hour</text>
+    </g>
+    
+    <!-- Benefit 3 -->
+    <g transform="translate(350, 25)">
+      <circle cx="0" cy="15" r="8" fill="#f59e0b"/>
+      <text x="20" y="12" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="white">Remote Work</text>
+      <text x="20" y="28" font-family="Arial, sans-serif" font-size="12" fill="#d1d5db">Work anywhere</text>
+    </g>
+    
+    <!-- Benefit 4 -->
+    <g transform="translate(520, 25)">
+      <circle cx="0" cy="15" r="8" fill="#8b5cf6"/>
+      <text x="20" y="12" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="white">Flexibility</text>
+      <text x="20" y="28" font-family="Arial, sans-serif" font-size="12" fill="#d1d5db">Choose projects</text>
+    </g>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <circle cx="1000" cy="150" r="3" fill="white" opacity="0.6"/>
+  <circle cx="1050" cy="180" r="2" fill="white" opacity="0.4"/>
+  <circle cx="980" cy="200" r="4" fill="white" opacity="0.5"/>
+  <circle cx="1100" cy="120" r="2" fill="white" opacity="0.7"/>
+  
+  <circle cx="100" cy="350" r="2" fill="white" opacity="0.5"/>
+  <circle cx="80" cy="380" r="3" fill="white" opacity="0.4"/>
+  <circle cx="120" cy="400" r="2" fill="white" opacity="0.6"/>
+</svg>
