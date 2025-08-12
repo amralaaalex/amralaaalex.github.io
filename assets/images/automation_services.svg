@@ -1,0 +1,212 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Card gradient -->
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f1f5f9;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Icon gradients -->
+    <linearGradient id="rpAGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="bpaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="marketingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="customerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="financeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="itGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradient)"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" fill="#1e293b" font-family="Arial, sans-serif" font-size="28" font-weight="bold">
+    Automation Services Types
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="80" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="16">
+    Transform Your Business with Professional Automation Solutions
+  </text>
+  
+  <!-- Central hub circle -->
+  <circle cx="400" cy="320" r="60" fill="url(#cardGradient)" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="400" y="315" text-anchor="middle" fill="#1e293b" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+    Business
+  </text>
+  <text x="400" y="330" text-anchor="middle" fill="#1e293b" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+    Process
+  </text>
+  <text x="400" y="345" text-anchor="middle" fill="#1e293b" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+    Automation
+  </text>
+  
+  <!-- RPA Card (Top Left) -->
+  <g transform="translate(120, 160)">
+    <rect width="140" height="80" rx="8" fill="url(#cardGradient)" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="25" cy="25" r="15" fill="url(#rpAGradient)"/>
+    <!-- Robot icon -->
+    <rect x="20" y="20" width="10" height="10" fill="white" rx="2"/>
+    <circle cx="22" cy="23" r="1" fill="url(#rpAGradient)"/>
+    <circle cx="28" cy="23" r="1" fill="url(#rpAGradient)"/>
+    <rect x="21" y="26" width="8" height="1" fill="white"/>
+    
+    <text x="50" y="20" fill="#1e293b" font-family="Arial, sans-serif" font-size="12" font-weight="bold">RPA</text>
+    <text x="10" y="45" fill="#64748b" font-family="Arial, sans-serif" font-size="9">Robotic Process</text>
+    <text x="10" y="55" fill="#64748b" font-family="Arial, sans-serif" font-size="9">Automation</text>
+    <text x="10" y="70" fill="#64748b" font-family="Arial, sans-serif" font-size="8">Rule-based tasks</text>
+  </g>
+  
+  <!-- BPA Card (Top Right) -->
+  <g transform="translate(540, 160)">
+    <rect width="140" height="80" rx="8" fill="url(#cardGradient)" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="25" cy="25" r="15" fill="url(#bpaGradient)"/>
+    <!-- Workflow icon -->
+    <rect x="18" y="20" width="4" height="4" fill="white" rx="1"/>
+    <rect x="24" y="20" width="4" height="4" fill="white" rx="1"/>
+    <rect x="30" y="20" width="4" height="4" fill="white" rx="1"/>
+    <line x1="22" y1="24" x2="24" y2="22" stroke="white" stroke-width="1"/>
+    <line x1="28" y1="24" x2="30" y2="22" stroke="white" stroke-width="1"/>
+    
+    <text x="50" y="20" fill="#1e293b" font-family="Arial, sans-serif" font-size="12" font-weight="bold">BPA</text>
+    <text x="10" y="45" fill="#64748b" font-family="Arial, sans-serif" font-size="9">Business Process</text>
+    <text x="10" y="55" fill="#64748b" font-family="Arial, sans-serif" font-size="9">Automation</text>
+    <text x="10" y="70" fill="#64748b" font-family="Arial, sans-serif" font-size="8">End-to-end workflows</text>
+  </g>
+  
+  <!-- Marketing Automation Card (Left) -->
+  <g transform="translate(40, 280)">
+    <rect width="140" height="80" rx="8" fill="url(#cardGradient)" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="25" cy="25" r="15" fill="url(#marketingGradient)"/>
+    <!-- Marketing icon -->
+    <circle cx="25" cy="25" r="8" fill="none" stroke="white" stroke-width="2"/>
+    <circle cx="25" cy="25" r="3" fill="white"/>
+    <line x1="32" y1="18" x2="35" y2="15" stroke="white" stroke-width="2"/>
+    <line x1="32" y1="32" x2="35" y2="35" stroke="white" stroke-width="2"/>
+    
+    <text x="50" y="20" fill="#1e293b" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Marketing</text>
+    <text x="10" y="45" fill="#64748b" font-family="Arial, sans-serif" font-size="9">Email campaigns</text>
+    <text x="10" y="55" fill="#64748b" font-family="Arial, sans-serif" font-size="9">Lead nurturing</text>
+    <text x="10" y="70" fill="#64748b" font-family="Arial, sans-serif" font-size="8">Social media</text>
+  </g>
+  
+  <!-- Customer Service Card (Right) -->
+  <g transform="translate(620, 280)">
+    <rect width="140" height="80" rx="8" fill="url(#cardGradient)" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="25" cy="25" r="15" fill="url(#customerGradient)"/>
+    <!-- Customer service icon -->
+    <circle cx="25" cy="23" r="6" fill="none" stroke="white" stroke-width="2"/>
+    <path d="M 20 28 Q 25 32 30 28" fill="none" stroke="white" stroke-width="2"/>
+    
+    <text x="50" y="20" fill="#1e293b" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Customer</text>
+    <text x="50" y="32" fill="#1e293b" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Service</text>
+    <text x="10" y="55" fill="#64748b" font-family="Arial, sans-serif" font-size="9">Chatbots</text>
+    <text x="10" y="70" fill="#64748b" font-family="Arial, sans-serif" font-size="8">Ticket routing</text>
+  </g>
+  
+  <!-- Finance Card (Bottom Left) -->
+  <g transform="translate(120, 400)">
+    <rect width="140" height="80" rx="8" fill="url(#cardGradient)" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="25" cy="25" r="15" fill="url(#financeGradient)"/>
+    <!-- Finance icon -->
+    <rect x="18" y="20" width="14" height="10" fill="none" stroke="white" stroke-width="2" rx="2"/>
+    <line x1="18" y1="24" x2="32" y2="24" stroke="white" stroke-width="1"/>
+    <line x1="18" y1="27" x2="32" y2="27" stroke="white" stroke-width="1"/>
+    
+    <text x="50" y="20" fill="#1e293b" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Finance</text>
+    <text x="10" y="45" fill="#64748b" font-family="Arial, sans-serif" font-size="9">Invoicing</text>
+    <text x="10" y="55" fill="#64748b" font-family="Arial, sans-serif" font-size="9">Expense reports</text>
+    <text x="10" y="70" fill="#64748b" font-family="Arial, sans-serif" font-size="8">Financial reporting</text>
+  </g>
+  
+  <!-- IT Automation Card (Bottom Right) -->
+  <g transform="translate(540, 400)">
+    <rect width="140" height="80" rx="8" fill="url(#cardGradient)" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="25" cy="25" r="15" fill="url(#itGradient)"/>
+    <!-- IT icon -->
+    <rect x="20" y="20" width="10" height="8" fill="none" stroke="white" stroke-width="2" rx="1"/>
+    <rect x="21" y="22" width="8" height="4" fill="white"/>
+    <circle cx="23" cy="30" r="1" fill="white"/>
+    <circle cx="27" cy="30" r="1" fill="white"/>
+    
+    <text x="50" y="20" fill="#1e293b" font-family="Arial, sans-serif" font-size="12" font-weight="bold">IT Process</text>
+    <text x="10" y="45" fill="#64748b" font-family="Arial, sans-serif" font-size="9">Server monitoring</text>
+    <text x="10" y="55" fill="#64748b" font-family="Arial, sans-serif" font-size="9">Software deployment</text>
+    <text x="10" y="70" fill="#64748b" font-family="Arial, sans-serif" font-size="8">Security monitoring</text>
+  </g>
+  
+  <!-- Connection lines -->
+  <line x1="340" y1="300" x2="190" y2="200" stroke="#cbd5e1" stroke-width="2" opacity="0.6"/>
+  <line x1="460" y1="300" x2="610" y2="200" stroke="#cbd5e1" stroke-width="2" opacity="0.6"/>
+  <line x1="350" y1="320" x2="180" y2="320" stroke="#cbd5e1" stroke-width="2" opacity="0.6"/>
+  <line x1="450" y1="320" x2="620" y2="320" stroke="#cbd5e1" stroke-width="2" opacity="0.6"/>
+  <line x1="340" y1="340" x2="190" y2="440" stroke="#cbd5e1" stroke-width="2" opacity="0.6"/>
+  <line x1="460" y1="340" x2="610" y2="440" stroke="#cbd5e1" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Benefits section at bottom -->
+  <rect x="50" y="520" width="700" height="60" rx="8" fill="url(#cardGradient)" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Benefit icons and text -->
+  <g transform="translate(80, 540)">
+    <circle cx="15" cy="15" r="12" fill="#22c55e"/>
+    <text x="15" y="19" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">⚡</text>
+    <text x="35" y="12" fill="#1e293b" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Efficiency</text>
+    <text x="35" y="23" fill="#64748b" font-family="Arial, sans-serif" font-size="8">10-50x faster</text>
+  </g>
+  
+  <g transform="translate(200, 540)">
+    <circle cx="15" cy="15" r="12" fill="#3b82f6"/>
+    <text x="15" y="19" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">💰</text>
+    <text x="35" y="12" fill="#1e293b" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Cost Savings</text>
+    <text x="35" y="23" fill="#64748b" font-family="Arial, sans-serif" font-size="8">40-80% reduction</text>
+  </g>
+  
+  <g transform="translate(340, 540)">
+    <circle cx="15" cy="15" r="12" fill="#f59e0b"/>
+    <text x="15" y="19" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">🎯</text>
+    <text x="35" y="12" fill="#1e293b" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Accuracy</text>
+    <text x="35" y="23" fill="#64748b" font-family="Arial, sans-serif" font-size="8">Eliminate errors</text>
+  </g>
+  
+  <g transform="translate(480, 540)">
+    <circle cx="15" cy="15" r="12" fill="#8b5cf6"/>
+    <text x="15" y="19" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">📈</text>
+    <text x="35" y="12" fill="#1e293b" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Scalability</text>
+    <text x="35" y="23" fill="#64748b" font-family="Arial, sans-serif" font-size="8">24/7 operations</text>
+  </g>
+  
+  <g transform="translate(620, 540)">
+    <circle cx="15" cy="15" r="12" fill="#ef4444"/>
+    <text x="15" y="19" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">😊</text>
+    <text x="35" y="12" fill="#1e293b" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Experience</text>
+    <text x="35" y="23" fill="#64748b" font-family="Arial, sans-serif" font-size="8">Better customer service</text>
+  </g>
+</svg>
