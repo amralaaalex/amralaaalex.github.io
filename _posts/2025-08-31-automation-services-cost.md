@@ -6,7 +6,7 @@ date: 2025-08-09
 author: "Data Automation XP team"
 categories: [automation]
 tags: [automation costs, implementation, automation providers, project timeline, RPA pricing]
-featured_image: "/assets/images/automation-implementation-2025.svg"
+image: "/assets/images/automation-implementation-2025.svg"
 seo_title: "Automation Services Cost Guide 2025: Pricing & Implementation"
 canonical_url: "https://dataautomationxp.com/automation/2025/08/31/automation-services-cost"
 excerpt: "Learn about automation service costs, implementation processes, and provider selection for successful automation projects."
