@@ -1,0 +1,43 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="300" fill="#F5F7FA"/>
+  
+  <!-- Abstract data flow lines -->
+  <path d="M0 150C200 100 400 200 600 150C800 100 1000 200 1200 150" stroke="#4A90E2" stroke-width="4" stroke-linecap="round" opacity="0.3"/>
+  <path d="M0 170C200 120 400 220 600 170C800 120 1000 220 1200 170" stroke="#4A90E2" stroke-width="4" stroke-linecap="round" opacity="0.3"/>
+  
+  <!-- Data points (circles) -->
+  <circle cx="200" cy="150" r="10" fill="#4A90E2"/>
+  <circle cx="400" cy="200" r="10" fill="#4A90E2"/>
+  <circle cx="600" cy="150" r="10" fill="#4A90E2"/>
+  <circle cx="800" cy="100" r="10" fill="#4A90E2"/>
+  <circle cx="1000" cy="200" r="10" fill="#4A90E2"/>
+  
+  <!-- Bar chart representation -->
+  <rect x="150" y="200" width="50" height="80" fill="#4A90E2" opacity="0.8"/>
+  <rect x="220" y="150" width="50" height="130" fill="#4A90E2" opacity="0.8"/>
+  <rect x="290" y="180" width="50" height="100" fill="#4A90E2" opacity="0.8"/>
+  
+  <!-- Title text -->
+  <text x="50" y="80" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#333333">Data Collection</text>
+  <text x="50" y="120" font-family="Arial, sans-serif" font-size="24" fill="#666666">Insights & Analytics</text>
+  
+  <!-- Digital grid effect -->
+  <g opacity="0.2">
+    <line x1="0" y1="50" x2="1200" y2="50" stroke="#4A90E2" stroke-width="1"/>
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#4A90E2" stroke-width="1"/>
+    <line x1="0" y1="150" x2="1200" y2="150" stroke="#4A90E2" stroke-width="1"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#4A90E2" stroke-width="1"/>
+    <line x1="0" y1="250" x2="1200" y2="250" stroke="#4A90E2" stroke-width="1"/>
+    <line x1="200" y1="0" x2="200" y2="300" stroke="#4A90E2" stroke-width="1"/>
+    <line x1="400" y1="0" x2="400" y2="300" stroke="#4A90E2" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="300" stroke="#4A90E2" stroke-width="1"/>
+    <line x1="800" y1="0" x2="800" y2="300" stroke="#4A90E2" stroke-width="1"/>
+    <line x1="1000" y1="0" x2="1000" y2="300" stroke="#4A90E2" stroke-width="1"/>
+  </g>
+  
+  <!-- Data icon (magnifying glass over data) -->
+  <circle cx="1000" cy="80" r="30" fill="none" stroke="#4A90E2" stroke-width="4"/>
+  <line x1="1015" y1="95" x2="1030" y2="110" stroke="#4A90E2" stroke-width="4"/>
+  <circle cx="1000" cy="80" r="10" fill="#4A90E2"/>
+</svg>

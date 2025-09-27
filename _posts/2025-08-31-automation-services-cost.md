@@ -4,7 +4,7 @@ title: "Automation Services Costs & Implementation: Your Complete 2025 Guide"
 description: "Discover automation service pricing models, implementation timelines, and how to choose the right provider for successful business process automation."
 date: 2025-08-09
 author: "Data Automation XP team"
-categories: [automation]
+categories: [Automation]
 tags: [automation costs, implementation, automation providers, project timeline, RPA pricing]
 image: "/assets/images/automation-implementation-2025.svg"
 seo_title: "Automation Services Cost Guide 2025: Pricing & Implementation"

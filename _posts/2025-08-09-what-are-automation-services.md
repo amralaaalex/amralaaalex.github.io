@@ -4,7 +4,7 @@ title: "What Are Automation Services? A Complete Guide to Types and Benefits in 
 description: "Discover what automation services are, explore different types including RPA and BPA, and learn how they can transform your business operations."
 date: 2025-08-09
 author: "Data Automation XP team"
-categories: [automation]
+categories: [Automation]
 tags: [automation services, RPA, business process automation, workflow automation, digital transformation]
 image: "/assets/images/automation_services.svg"
 seo_title: "Automation Services Explained: Types, Benefits & Applications 2025"
