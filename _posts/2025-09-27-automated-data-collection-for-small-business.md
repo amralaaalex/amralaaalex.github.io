@@ -6,9 +6,8 @@ author: "Data Automation XP team"
 categories: [Automation]
 tags: [automated-data-collection, small-business-automation, data-processing, business-efficiency]
 image: /assets/images/automated-data-collection-guide.svg
-
 seo_title: "Automated Data Collection for Small Business: The Complete 2025 Guide"
-canonical_url: "https://dataautomationxp.com/2025-09-27-automated-data-collection-for-small-business"
+canonical_url: "https://dataautomationxp.com/automation/2025/09/27/automated-data-collection-for-small-business.html"
 excerpt: "Discover how automated data collection can transform your small business operations. Learn about costs, benefits, implementation strategies, and real ROI examples from 2025 data."
 ---
 
